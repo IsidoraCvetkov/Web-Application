@@ -7,6 +7,7 @@ namespace WebApp.Persistence
     {
         public DbSet<Pozicija> Pozicije { get; set; }
         public DbSet<Nadredjen> Nadredjeni { get; set; }
+        public DbSet<Radnik> Radnici { get; set; }
         public ApplicationDbContext()
             //Reference name connection string from web.config file 
             : base("DefaultConnection")
