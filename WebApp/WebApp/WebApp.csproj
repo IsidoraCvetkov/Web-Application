@@ -156,7 +156,12 @@
     <Compile Include="Migrations\202302251751214_IntialMigration.Designer.cs">
       <DependentUpon>202302251751214_IntialMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302252054337_NadredjenTableMigration.cs" />
+    <Compile Include="Migrations\202302252054337_NadredjenTableMigration.Designer.cs">
+      <DependentUpon>202302252054337_NadredjenTableMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Nadredjen.cs" />
     <Compile Include="Models\Pozicija.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -222,6 +227,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202302251751214_IntialMigration.resx">
       <DependentUpon>202302251751214_IntialMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252054337_NadredjenTableMigration.resx">
+      <DependentUpon>202302252054337_NadredjenTableMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
