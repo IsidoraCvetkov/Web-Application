@@ -164,8 +164,28 @@
     <Compile Include="Migrations\202302252130221_RadnikTableMigration.Designer.cs">
       <DependentUpon>202302252130221_RadnikTableMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302252137281_GodisnjiOdmorTableMigration.cs" />
+    <Compile Include="Migrations\202302252137281_GodisnjiOdmorTableMigration.Designer.cs">
+      <DependentUpon>202302252137281_GodisnjiOdmorTableMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302252202381_BonusTableMigration.cs" />
+    <Compile Include="Migrations\202302252202381_BonusTableMigration.Designer.cs">
+      <DependentUpon>202302252202381_BonusTableMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302252204553_OdbitakTableMigration.cs" />
+    <Compile Include="Migrations\202302252204553_OdbitakTableMigration.Designer.cs">
+      <DependentUpon>202302252204553_OdbitakTableMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202302252210116_PlataTableMigration.cs" />
+    <Compile Include="Migrations\202302252210116_PlataTableMigration.Designer.cs">
+      <DependentUpon>202302252210116_PlataTableMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Bonus.cs" />
+    <Compile Include="Models\GodisnjiOdmor.cs" />
     <Compile Include="Models\Nadredjen.cs" />
+    <Compile Include="Models\Odbitak.cs" />
+    <Compile Include="Models\Plata.cs" />
     <Compile Include="Models\Pozicija.cs" />
     <Compile Include="Models\Radnik.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
@@ -238,6 +258,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302252130221_RadnikTableMigration.resx">
       <DependentUpon>202302252130221_RadnikTableMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252137281_GodisnjiOdmorTableMigration.resx">
+      <DependentUpon>202302252137281_GodisnjiOdmorTableMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252202381_BonusTableMigration.resx">
+      <DependentUpon>202302252202381_BonusTableMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252204553_OdbitakTableMigration.resx">
+      <DependentUpon>202302252204553_OdbitakTableMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252210116_PlataTableMigration.resx">
+      <DependentUpon>202302252210116_PlataTableMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

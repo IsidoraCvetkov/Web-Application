@@ -97,3 +97,7 @@ C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.NadredjenTableMigration.resources
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.RadnikTableMigration.resources
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.GodisnjiOdmorTableMigration.resources
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.BonusTableMigration.resources
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.OdbitakTableMigration.resources
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.PlataTableMigration.resources
