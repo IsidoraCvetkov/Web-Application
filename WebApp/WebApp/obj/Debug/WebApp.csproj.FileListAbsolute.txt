@@ -96,3 +96,4 @@ C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\EntityFramewo
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.IntialMigration.resources
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.csproj.GenerateResource.cache
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.NadredjenTableMigration.resources
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.RadnikTableMigration.resources

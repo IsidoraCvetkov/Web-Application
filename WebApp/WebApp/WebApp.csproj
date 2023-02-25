@@ -160,9 +160,14 @@
     <Compile Include="Migrations\202302252054337_NadredjenTableMigration.Designer.cs">
       <DependentUpon>202302252054337_NadredjenTableMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202302252130221_RadnikTableMigration.cs" />
+    <Compile Include="Migrations\202302252130221_RadnikTableMigration.Designer.cs">
+      <DependentUpon>202302252130221_RadnikTableMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Nadredjen.cs" />
     <Compile Include="Models\Pozicija.cs" />
+    <Compile Include="Models\Radnik.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -230,6 +235,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202302252054337_NadredjenTableMigration.resx">
       <DependentUpon>202302252054337_NadredjenTableMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202302252130221_RadnikTableMigration.resx">
+      <DependentUpon>202302252130221_RadnikTableMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
