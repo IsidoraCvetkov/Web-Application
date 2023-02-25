@@ -89,3 +89,7 @@ C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.csproj.CopyComplete
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.dll
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.pdb
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\EntityFramework.dll
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\EntityFramework.xml
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\EntityFramework.SqlServer.dll
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\EntityFramework.SqlServer.xml
