@@ -11,6 +11,7 @@ namespace WebApp.Persistence
         public DbSet<GodisnjiOdmor> GodisnjiOdmori { get; set; }
         public DbSet<Bonus> Bonusi { get; set; }
         public DbSet<Odbitak> Odbitci { get; set; }
+        public DbSet<Plata> Plate { get; set; }
         public ApplicationDbContext()
             //Reference name connection string from web.config file 
             : base("DefaultConnection")
