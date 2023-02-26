@@ -189,6 +189,24 @@
     <Compile Include="Models\Pozicija.cs" />
     <Compile Include="Models\Radnik.cs" />
     <Compile Include="Persistence\ApplicationDbContext.cs" />
+    <Compile Include="Persistence\Repository\BonusRepository.cs" />
+    <Compile Include="Persistence\Repository\GodisnjiOdmorRepository.cs" />
+    <Compile Include="Persistence\Repository\IBonusRepository.cs" />
+    <Compile Include="Persistence\Repository\IGodisnjiOdmorRepository.cs" />
+    <Compile Include="Persistence\Repository\INadredjenRepository.cs" />
+    <Compile Include="Persistence\Repository\IOdbitakRepository.cs" />
+    <Compile Include="Persistence\Repository\IPlataRepository.cs" />
+    <Compile Include="Persistence\Repository\IPozicijaRepository.cs" />
+    <Compile Include="Persistence\Repository\IRadnikRepository.cs" />
+    <Compile Include="Persistence\Repository\IRepository.cs" />
+    <Compile Include="Persistence\Repository\NadredjenRepository.cs" />
+    <Compile Include="Persistence\Repository\OdbitakRepository.cs" />
+    <Compile Include="Persistence\Repository\PlataRepository.cs" />
+    <Compile Include="Persistence\Repository\PozicijaRepository.cs" />
+    <Compile Include="Persistence\Repository\RadnikRepository.cs" />
+    <Compile Include="Persistence\Repository\Repository.cs" />
+    <Compile Include="Persistence\UnitOfWork\IUnitOfWork.cs" />
+    <Compile Include="Persistence\UnitOfWork\UnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -233,8 +251,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Persistence\Repository\" />
-    <Folder Include="Persistence\UnitOfWork\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
