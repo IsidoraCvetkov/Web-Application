@@ -11,13 +11,13 @@ namespace WebApp.Migrations
                 "dbo.Platas",
                 c => new
                     {
-                        IdRadnik = c.Int(nullable: false, identity: true),
+                        IdPlata = c.Int(nullable: false, identity: true),
                         RadnikId = c.Int(nullable: false),
                         PozicijaId = c.Int(nullable: false),
                         IznosPlate = c.Int(nullable: false),
                         DatumPromene = c.DateTime(nullable: false),
                     })
-                .PrimaryKey(t => t.IdRadnik)
+                .PrimaryKey(t => t.IdPlata)
                 .ForeignKey("dbo.Pozicijas", t => t.PozicijaId, cascadeDelete: false)
                 .ForeignKey("dbo.Radniks", t => t.RadnikId, cascadeDelete: true)
                 .Index(t => t.PozicijaId)

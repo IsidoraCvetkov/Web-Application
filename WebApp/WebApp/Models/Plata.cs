@@ -7,7 +7,7 @@ namespace WebApp.Models
     public class Plata
     {
         [Key]
-        public int IdRadnik { get; set; }
+        public int IdPlata { get; set; }
         [ForeignKey("Radnik")]
         public int RadnikId { get; set; }
         public Radnik Radnik { get; set; }
