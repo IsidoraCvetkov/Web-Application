@@ -167,8 +167,14 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\BonusController.cs" />
+    <Compile Include="Controllers\GodisnjiOdmorController.cs" />
+    <Compile Include="Controllers\NadredjenController.cs" />
+    <Compile Include="Controllers\OdbitakController.cs" />
+    <Compile Include="Controllers\PlataController.cs" />
     <Compile Include="Controllers\PozicijaController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RadnikController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
