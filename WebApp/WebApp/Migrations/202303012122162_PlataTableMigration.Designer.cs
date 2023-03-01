@@ -6,14 +6,14 @@ namespace WebApp.Migrations
     using System.Data.Entity.Migrations.Infrastructure;
     using System.Resources;
     
-    [GeneratedCode("EntityFramework.Migrations", "6.0.0-20911")]
+    [GeneratedCode("EntityFramework.Migrations", "6.1.0-30225")]
     public sealed partial class PlataTableMigration : IMigrationMetadata
     {
         private readonly ResourceManager Resources = new ResourceManager(typeof(PlataTableMigration));
         
         string IMigrationMetadata.Id
         {
-            get { return "202302252210116_PlataTableMigration"; }
+            get { return "202303012122162_PlataTableMigration"; }
         }
         
         string IMigrationMetadata.Source

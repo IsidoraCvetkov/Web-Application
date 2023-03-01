@@ -18,19 +18,16 @@ namespace WebApp.Migrations
                         DatumPromene = c.DateTime(nullable: false),
                     })
                 .PrimaryKey(t => t.IdPlata)
-                .ForeignKey("dbo.Pozicijas", t => t.PozicijaId, cascadeDelete: false)
-                .ForeignKey("dbo.Radniks", t => t.RadnikId, cascadeDelete: true)
-                .Index(t => t.PozicijaId)
-                .Index(t => t.RadnikId);
-            
+                .ForeignKey("dbo.Pozicijas", t => t.PozicijaId, cascadeDelete: true)
+                .ForeignKey("dbo.Radniks", t => t.RadnikId, cascadeDelete: false)
+                .Index(t => t.RadnikId)
+                .Index(t => t.PozicijaId);          
         }
         
         public override void Down()
         {
             DropForeignKey("dbo.Platas", "RadnikId", "dbo.Radniks");
             DropForeignKey("dbo.Platas", "PozicijaId", "dbo.Pozicijas");
-            DropIndex("dbo.Platas", new[] { "RadnikId" });
-            DropIndex("dbo.Platas", new[] { "PozicijaId" });
             DropTable("dbo.Platas");
         }
     }
