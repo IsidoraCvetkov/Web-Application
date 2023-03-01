@@ -100,7 +100,6 @@ C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.GodisnjiOdmorTableMigration.resources
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.BonusTableMigration.resources
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.OdbitakTableMigration.resources
-C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.PlataTableMigration.resources
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\System.Net.Http.Formatting.dll
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\System.Web.Http.dll
@@ -158,3 +157,4 @@ C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\Microsoft.Asp
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\System.Web.Http.Owin.dll
 C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\bin\System.Web.Http.Owin.xml
+C:\Users\isidora.cvetkov\Desktop\Web-Application\WebApp\WebApp\obj\Debug\WebApp.Migrations.PlataTableMigration.resources

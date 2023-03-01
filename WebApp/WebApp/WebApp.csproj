@@ -269,9 +269,9 @@
     <Compile Include="Migrations\202302252204553_OdbitakTableMigration.Designer.cs">
       <DependentUpon>202302252204553_OdbitakTableMigration.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202302252210116_PlataTableMigration.cs" />
-    <Compile Include="Migrations\202302252210116_PlataTableMigration.Designer.cs">
-      <DependentUpon>202302252210116_PlataTableMigration.cs</DependentUpon>
+    <Compile Include="Migrations\202303012122162_PlataTableMigration.cs" />
+    <Compile Include="Migrations\202303012122162_PlataTableMigration.Designer.cs">
+      <DependentUpon>202303012122162_PlataTableMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Bonus.cs" />
@@ -350,7 +350,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Views\Pozicija\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -384,8 +383,8 @@
     <EmbeddedResource Include="Migrations\202302252204553_OdbitakTableMigration.resx">
       <DependentUpon>202302252204553_OdbitakTableMigration.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202302252210116_PlataTableMigration.resx">
-      <DependentUpon>202302252210116_PlataTableMigration.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202303012122162_PlataTableMigration.resx">
+      <DependentUpon>202303012122162_PlataTableMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

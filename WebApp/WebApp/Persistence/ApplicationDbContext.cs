@@ -5,19 +5,18 @@ namespace WebApp.Persistence
 {
     public class ApplicationDbContext : DbContext
     {
-        public DbSet<Pozicija> Pozicije { get; set; }
-        public DbSet<Nadredjen> Nadredjeni { get; set; }
-        public DbSet<Radnik> Radnici { get; set; }
-        public DbSet<GodisnjiOdmor> GodisnjiOdmori { get; set; }
-        public DbSet<Bonus> Bonusi { get; set; }
-        public DbSet<Odbitak> Odbitci { get; set; }
-        public DbSet<Plata> Plate { get; set; }
+        public DbSet<Pozicija> Pozicijas { get; set; }
+        public DbSet<Nadredjen> Nadredjens { get; set; }
+        public DbSet<Radnik> Radniks { get; set; }
+        public DbSet<GodisnjiOdmor> GodisnjiOdmors { get; set; }
+        public DbSet<Bonus> Bonus { get; set; }
+        public DbSet<Odbitak> Odbitaks { get; set; }
+        public DbSet<Plata> Platas { get; set; }
         public ApplicationDbContext()
             //Reference name connection string from web.config file 
             : base("DefaultConnection")
         {
         }
-
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
