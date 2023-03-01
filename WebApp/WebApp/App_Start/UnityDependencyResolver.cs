@@ -5,6 +5,7 @@ using System.Web.Http.Dependencies;
 using Unity;
 using Unity.Lifetime;
 using WebApp.Persistence;
+using WebApp.Persistence.Repository;
 using WebApp.Persistence.UnitOfWork;
 
 namespace WebApp.App_Start
@@ -58,6 +59,13 @@ namespace WebApp.App_Start
 
             container.RegisterType<DbContext, ApplicationDbContext>(new PerResolveLifetimeManager());
             container.RegisterType<IUnitOfWork, UnitOfWork>();
+            container.RegisterType<IPlataRepository, PlataRepository>();
+            container.RegisterType<IRadnikRepository, RadnikRepository>();
+            container.RegisterType<IBonusRepository, BonusRepository>();
+            container.RegisterType<IOdbitakRepository, OdbitakRepository>();
+            container.RegisterType<IPozicijaRepository, PozicijaRepository>();
+            container.RegisterType<IGodisnjiOdmorRepository, GodisnjiOdmorRepository>();
+            container.RegisterType<INadredjenRepository, NadredjenRepository>();
         }
         public void Dispose()
         {
