@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row vertical-offset-100">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Informacije o plati</h3>
+			 	</div>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Ime</th>
+                        <th>Prezime</th>
+                        <th>Datum promene plate</th>   
+                        <th>Pozicija</th>
+                        <th>Iznos plate</th>       
+                    </tr>
+                    <tr *ngFor="let item of platas">
+                        <td>{{item.Ime}}</td>
+                        <td>{{item.Prezime}}</td>
+                        <td>{{item.DatumPromene | date: 'dd/MM/yyyy'}}</td>
+                        <td>{{item.NazivPozicije}}</td>
+                        <td>{{item.IznosPlate}}</td>
+                    </tr>
+                </table>   
+            </div>
+    </div>
+</div>
