@@ -14,7 +14,7 @@ namespace WebApp.Persistence.UnitOfWork
         [Dependency]
         public IRadnikRepository Radnici { get; set; }
         [Dependency]
-        public IPlataRepository Plata { get; set; }
+        public IPlataRepository Platas { get; set; }
         [Dependency]
         public INadredjenRepository Nadredjeni { get; set; }
         [Dependency]
