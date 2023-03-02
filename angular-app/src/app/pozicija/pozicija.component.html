@@ -1,0 +1,49 @@
+<div class="container">
+    <div class="row vertical-offset-100">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Informacije o pozicijama</h3>
+			 	</div>
+                 <table class="table table-striped">
+                    <tr>
+                        <th>Naziv pozicije</th>    
+                    </tr>
+                    <tr *ngFor="let item of pozicijasAll">
+                        <td>{{item.NazivPozicije}}</td>
+                        <td style="padding: 4px;">
+                            <button class="btn btn-lg btn-success btn-block" style="background-color: #008CBA;" (click)="editPozicija(item)">Izmeni</button>
+                        </td>
+                        <!-- <td style="padding: 4px;">
+                            <button class="btn btn-lg btn-success btn-block" style="background-color: #008CBA;" (click)="deletePozicija(item)">Obrisi</button>
+                        </td> -->
+                    </tr>
+                </table>   
+			  	<div class="panel-body">
+                    <div class="panel-heading">
+                        <h5 class="panel-title">Dodavanje nove pozicije</h5>
+                     </div>
+                    <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                        <div class="form-group">
+                          <label class="label-style">Naziv pozicije:</label>
+                          <input formControlName="nazivPozicije" required type="text" name="nazivPozicije" class="form-control">
+                        </div>
+                        <button class="btn btn-lg btn-success btn-block" style="background-color: #008CBA;" [disabled]="!addForm.valid">Dodaj poziciju</button>
+                    </form>
+			    </div>
+                <div class="panel-body">
+                    <div *ngIf="isBtnEditClicked">
+                        <div class="panel-heading">
+                            <h5 class="panel-title">Izmeni poziciju</h5>
+                        </div>
+                        <form [formGroup]="editForm" (ngSubmit)="onSubmitEdit()">
+                            <div class="form-group">
+                                <label class="label-style">Novi nazi pozicije:</label>
+                                <input formControlName="nazivPozicije" type="text" name="nazivPozicije" class="form-control">
+                            </div>
+                        <button class="btn btn-lg btn-success btn-block" style="background-color: #008CBA;" [disabled]="!editForm.valid" >Izmeni poziciju</button>
+                        </form>
+                    </div>
+                </div>
+			</div>
+	</div>
+</div>
