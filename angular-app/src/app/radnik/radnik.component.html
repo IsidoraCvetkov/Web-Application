@@ -1,1 +1,110 @@
-<p>radnik works!</p>
+<div class="container">
+    <div class="row vertical-offset-100">
+    		<div class="panel panel-default">
+			  	<div class="panel-body">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                          <h3 class="panel-title">Informacije o radnicima</h3>
+                       </div>
+                      <table class="table table-striped">
+                          <tr>
+                              <th>Ime</th>
+                              <th>Prezime</th>
+                              <th>Period raspodele</th>   
+                              <th>Pozicija</th>
+                              <th>Nadredjen</th>       
+                          </tr>
+                          <tr *ngFor="let item of radniks">
+                              <td>{{item.Ime}}</td>
+                              <td>{{item.Prezime}}</td>
+                              <td>{{item.PreiodRaspodele | date: 'dd/MM/yyyy'}}</td>
+                              <td>{{item.NazivPozicije}}</td>
+                              <td>{{item.ImeNadredjenog}} {{item.PrezimeNadredjenog}}</td>
+                              <td style="padding: 4px;">
+                                  <button class="btn btn-lg btn-success btn-block" style="background-color: #008CBA;" (click)="detaljiRadnika(item)">Detalji</button>
+                              </td>
+                          </tr>
+                      </table>   
+                  </div>
+                  <div *ngIf="isBtnDetaljiClicked">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                                <h3 class="panel-title">Informacije o radniku</h3>
+                            </div>
+                                <div class="form-group">
+                                    <div class="label-style">Ime:</div>
+                                    <div class="form-control" placeholder="Ime" type="text" readonly>
+                                        {{radnikFirst.Ime}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Prezime:</div>
+                                    <div class="form-control" placeholder="Prezime" type="text" readonly>
+                                        {{radnikFirst.Prezime}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Pozicija:</div>
+                                    <div class="form-control" placeholder="Pozicija" type="text" readonly>
+                                        {{radnikFirst.NazivPozicije}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Period raspodele na poziciju:</div>
+                                    <div class="form-control" placeholder="yyyy-MM-dd" min="2013-01-01" max="2019-12-31" type="date" readonly>
+                                        {{radnikFirst.PreiodRaspodele | date: 'dd/MM/yyyy'}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Iznos plate:</div>
+                                    <div class="form-control" placeholder="Iznos plate" type="text" readonly>
+                                        {{radnikFirst.IznosPlate}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Bonusi:</div>
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped">
+                                            <tr *ngFor="let item of radnikFirst.BonusiAktivni">
+                                                <td>{{item.IznosBonusa}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>  
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Odbitci:</div>
+                                    <div class="panel panel-default">
+                                        <table class="table table-striped">
+                                            <tr *ngFor="let item of radnikFirst.OdbitciAktivni">
+                                                <td>{{item.IznosOdbitka}}</td>
+                                            </tr>
+                                        </table>  
+                                </div> 
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Dani godisnjeg odmora:</div>
+                                    <div class="form-control" placeholder="Dani godisnjeg odmora" type="text" readonly>
+                                        {{radnikFirst.BrojDanaGodisnjegOdmora}}
+                                    </div>
+                                </div>
+                                <div class="panel-heading">
+                                    <h5 class="panel-title">Informacije o nadredjenom</h5>
+                                </div>                       
+                                <div class="form-group">
+                                    <div class="label-style">Ime :</div>
+                                    <div class="form-control" placeholder="Ime" type="text" readonly>
+                                        {{radnikFirst.ImeNadredjenog}}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="label-style">Prezime:</div>
+                                    <div class="form-control" placeholder="Prezime" type="text" readonly>
+                                        {{radnikFirst.PrezimeNadredjenog}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+			    </div>
+			</div>
+	</div>
+</div>

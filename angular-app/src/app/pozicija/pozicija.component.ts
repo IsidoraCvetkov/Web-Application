@@ -29,8 +29,10 @@ export class PozicijaComponent implements OnInit {
     });
 
     this.pozicija = new Pozicija();
+    this.pozicijasAll = new Array<Pozicija>();
     this.isBtnEditClicked = false;
   }
+
   async ngOnInit() {
     this.pozicijasAll = await this.pozicijaService.getAllPozicijas();
   }
@@ -42,11 +44,8 @@ export class PozicijaComponent implements OnInit {
       this.message = "Morate popuniti polje naziva pozicije";
     }
     else{
-      this.pozicijaService.addPozicija(this.pozicija).subscribe(data=>{
-        this.message=data; 
-        }, err => console.log(err));
-    }
-    this.pozicijasAll = await this.pozicijaService.getAllPozicijas();
+      this.pozicijasAll = await this.pozicijaService.addPozicija(this.pozicija);
+    }   
   }
 
   public editPozicija(pozicija){
@@ -60,14 +59,6 @@ export class PozicijaComponent implements OnInit {
 
   public async onSubmitEdit(){
     this.pozicija.NazivPozicije = this.editForm.controls['nazivPozicije'].value;
-
-    this.pozicijaService.editPozicija(this.pozicija).subscribe(data=>{
-        if(data != "Ok")
-          alert(data);
-        this.messageEdit = data;
-      }, err => console.log(err));
-
-    this.isBtnEditClicked = false;
-    this.pozicijasAll = await this.pozicijaService.getAllPozicijas();
+    this.pozicijasAll = await this.pozicijaService.editPozicija(this.pozicija);
   }
 }
