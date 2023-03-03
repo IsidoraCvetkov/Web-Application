@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
+using WebApp.DtoModels;
 using WebApp.Models;
 using WebApp.Persistence.UnitOfWork;
 
@@ -15,23 +17,57 @@ namespace WebApp.Controllers
         {
 
         }
+        public PlataController(IUnitOfWork db)
+        {
+            this.db = db;
+        }
+        [AllowAnonymous]
+        [Route("GetPlatas")]
+        public IEnumerable<PlataModel> GetPlatas()
+        {
+            List<Plata> platas = db.Platas.GetAll().ToList();
+            List<PlataModel> returnValue = new List<PlataModel>();
+
+            foreach (Plata p in platas)
+            {
+                Radnik radnikFirst = db.Radnici.GetAll().Where(rd => rd.IdRadnik == p.RadnikId).ToList().FirstOrDefault();
+                Pozicija pozicija = db.Pozicije.GetAll().Where(poz => poz.IdPozicija == p.PozicijaId).ToList().FirstOrDefault();
+                PlataModel pl = new PlataModel()
+                {
+                        IdPlata = p.IdPlata,
+                        IznosPlate = p.IznosPlate,
+                        Ime = radnikFirst.Ime,
+                        Prezime = radnikFirst.Prezime,
+                        NazivPozicije = pozicija.NazivPozicije,                   
+                        DatumPromene = p.DatumPromene
+                };
+                returnValue.Add(pl);
+            }
+            return returnValue;
+        }
+
         [AllowAnonymous]
         [Route("GetAllPlatas")]
-        public IEnumerable<Plata> GetLines()
+        public IEnumerable<Plata> GetAllPlatas()
         {
-            List<Plata> lines = db.Plata.GetAll().ToList();
-            List<Plata> ret = new List<Plata>();
+            List<Plata> platas = db.Platas.GetAll().ToList();
+            List<Plata> returnValue = new List<Plata>();
 
-            foreach (Plata l in lines)
+            foreach (Plata p in platas)
             {
-                Plata lp = new Plata() { IdPlata = l.IdPlata,
-                                         IznosPlate = l.IznosPlate,
-                                         RadnikId = l.RadnikId,
-                                         Pozicija = l.Pozicija,
-                                         DatumPromene = l.DatumPromene };
-                ret.Add(lp);
+                Plata pl = new Plata()
+                {
+                    IdPlata = p.IdPlata,
+                    IznosPlate = p.IznosPlate,
+                    RadnikId = p.RadnikId,
+                    Radnik = p.Radnik,
+                    Pozicija = p.Pozicija,
+                    PozicijaId = p.PozicijaId,
+                    DatumPromene = p.DatumPromene
+                };
+                returnValue.Add(pl);
             }
-            return ret;
+            return returnValue;
         }
         protected override void Dispose(bool disposing)
         {
