@@ -21,7 +21,7 @@ INSERT INTO [dbo].[GodisnjiOdmors]
            ([RadnikId]
            ,[BrojDana])
      VALUES
-           (3,
+           (13,
             18)
 GO
 
