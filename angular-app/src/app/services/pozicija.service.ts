@@ -18,10 +18,10 @@ export class PozicijaService {
   }
 
   public addPozicija(pozicija :Pozicija){
-    return this.client.post<any>(this.baseUrl+"api/pozicija/AddPozicija",pozicija, {'headers': {'Content-type': 'application/json'}});
+    return this.client.post<any>(this.baseUrl+"api/pozicija/AddPozicija",pozicija, {'headers': {'Content-type': 'application/json'}}).toPromise<Pozicija[]>();
   }
 
   public editPozicija(pozicija :Pozicija){
-    return this.client.post<any>(this.baseUrl+"api/pozicija/EditPozicija",pozicija, {'headers': {'Content-type': 'application/json'}});
+    return this.client.post<any>(this.baseUrl+"api/pozicija/EditPozicija",pozicija, {'headers': {'Content-type': 'application/json'}}).toPromise<Pozicija[]>();
   }
 }
