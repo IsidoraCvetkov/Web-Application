@@ -1,19 +1,26 @@
-<br>
-    <div class="panel-heading">
-        <h3 align="center" class="panel-title">Welcome to web application!</h3>
+<div class="container">
+    <div class="row vertical-offset-100">
+    		<div class="panel panel-default">
+			  	<div class="panel-heading">
+			    	<h3 class="panel-title">Informacije o radnicima</h3>
+			 	</div>
+                <table class="table table-striped">
+                    <tr>
+                        <th>Ime</th>
+                        <th>Prezime</th>
+                        <th>Period raspodele</th>   
+                        <th>Pozicija</th>
+                        <th>Nadredjen</th>       
+                    </tr>
+                    <tr *ngFor="let item of radniks">
+                        <td>{{item.Ime}}</td>
+                        <td>{{item.Prezime}}</td>
+                        <td>{{item.PreiodRaspodele | date: 'dd/MM/yyyy'}}</td>
+                        <td>{{item.NazivPozicije}}</td>
+                        <td>{{item.ImeNadredjenog}} {{item.PrezimeNadredjenog}}</td>
+                    </tr>
+                </table>   
+            </div>
     </div>
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;
-    <div class="row left-offset-250">  
-        <a href="/radnik" >
-            <img src="assets/radnik.png" style="align-items: right;" width = "150" height="150" title="Klikom na sliku precicete na stranicu sa informacijama o radniku"/>
-        </a>
-        <a href="/plata" >
-            <img src="assets/plata.png" style="align-items: center;" width = "150" height="150" title="Klikom na sliku precicete na stranicu sa informacijama o platama"/>
-        </a>
-        <a href="/pozicija" >
-            <img src="assets/pozicija.png" style="align-items: left;" width = "150" height="150" title="Klikom na sliku precicete na stranicu sa informacijama o pozicijama"/>
-        </a>
-    </div>
-
+</div>
     

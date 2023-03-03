@@ -1,4 +1,6 @@
+import { RadnikService } from './../services/radnik.service';
 import { Component, OnInit } from '@angular/core';
+import { Radnik, RadnikModel } from '../models/radnik';
 
 @Component({
   selector: 'app-home',
@@ -6,10 +8,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  radniks: Radnik[];
+  radnikFirst: RadnikModel;
 
-  constructor() { }
+  constructor(private radnikService: RadnikService) {
+    this.radnikFirst = new RadnikModel();
+   }
 
-  ngOnInit() {
+  async ngOnInit() {
+    this.radniks = await this.radnikService.getAllRadniks();
   }
 
+  public async detaljiRadnika(radnik){
+    this.radnikFirst = await this.radnikService.getRadnik();
+  }
 }
